@@ -1,0 +1,207 @@
+/*   colors from light to dark from colorhunt.co
+     #E9E5D6
+     #ACB992
+     #464E2E
+     #362706
+
+     also:
+     #E5E3C9
+     #B4CFB0
+     #94B49F
+     #789395
+     */
+body {
+  margin: 0;
+  text-align: center;
+  /* this is called a font stack. this came form 'cssfontstack.com'  here you are
+  selecting helvetica neue as your preferred font, but then the next three are listed
+  in preference if the user does not have.  will finally default to any sans-serif
+  font they have.  arial is most common on all machines.  verdana is also very popular
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  */
+  /*but if we are anal and specific we can imbed our font so everyone uses the same
+  font regardless of their environment.  you can get free fonts at fonts.google.
+  look at the index file for a link to our selected fonts.
+
+  now we will used our linked fonts*/
+  font-family: 'Merriweather', serif;
+  color: black;
+}
+
+/* want to override the default margins and eliminate them.  I could list each individually, but 'margin: 0' will change them all
+
+now centering:
+    can do above with global 'text-align: center'
+    or I could do in each section.  in h1 below I could do'margin: 0 auto' will
+    do margin zero on top and bottom and then auto on left and right.  if you define
+    a smaller width like 10%, this auto feature on left and right will effectivly
+    cener it.
+    but....we are going to do global centering above in the body section*/
+a {
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ACB992;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: 'Sacramento', cursive;
+  /* font size of 90px is our goal.  so we can just do 'font-size: 90px'
+      but, if a user changes their default size font on their browser this will not change
+      we can use percentage to account for this.  100% is 16px so, 90 is about 560%
+      we can also set it by 'em's  1 em is 16 px  em will scale like % if user changes
+      their settings.  px does not scale
+
+      one thing to watch out for.  if we change font size in the body (which is the
+      parent for h1) to 2em then it gets multiplies. so 560% will be of 2em which
+      is actuall 1120 or 2x what we specify below.
+
+      there is a new options called 'rem' or root em.  this ignores any parent settings and just looks here.
+      this is angela's preferred.  most straightforward and adaptable.--> */
+  font-size: 5.6rem;
+  /* this will reduce the space between the two headings by making the bottom
+      margin 0 */
+  margin: 50px auto 0 auto;
+  color: #464E2E;
+  width: 50%;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #464E2E;
+  width: 50%;
+  margin: auto;
+  font-weight: normal;
+  padding: 20px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #362706;
+}
+
+hr {
+  border-style: none;
+  border-top: 7px dotted #EAF6F6;
+  width: 4%;
+  margin: 50px auto;
+}
+
+.upper-box {
+  background-color: #E9E5D6;
+  padding-top: 100px;
+  /* need to do this so a daughter piece (cloud) can be set to this positioning */
+  position: relative;
+}
+
+.middle-box {
+  background-color: #ACB992;
+  padding-top: 50px;
+}
+
+.lower-box {
+  background-color: #464E2E;
+  color: #362706;
+  padding-top: 10px;
+}
+
+.top-cloud {
+  /* now we can make the position absolute so it will be fixed inside the upper box
+  but relative to those sides. */
+  position: absolute;
+  right: 15%;
+  top: 5%;
+  width: 10%;
+  }
+
+.bottom-cloud {
+  position: absolute;
+  left: 18%;
+  bottom: 35%;
+  width: 10%;
+}
+
+.city {
+  width: 25%;
+}
+
+.friend {
+  width: 10%;
+}
+
+.apt-img {
+  width: 25%;
+  display: inline-block;
+}
+
+.crowd-img {
+  width: 25%;
+}
+
+.intro {
+  width: 20%;
+  margin: auto;
+  padding-bottom: 20px;
+  line-height: 2
+}
+
+.skill-row {
+  display: inline-block;
+  margin: 50px auto 0 10%;
+  line-height: 2;
+  width: 20%;
+  vertical-align: top;
+  text-align: left;
+}
+
+.skill-desc {
+  vertical-align: bottom;
+  width: 100%;
+  text-align: left;
+}
+
+.btn {
+  background: #464E2E;
+  background-image: -webkit-linear-gradient(top, #464E2E, #ACB992);
+  background-image: -moz-linear-gradient(top, #464E2E, #ACB992);
+  background-image: -ms-linear-gradient(top, #464E2E, #ACB992);
+  background-image: -o-linear-gradient(top, #464E2E, #ACB992);
+  background-image: linear-gradient(to bottom, #464E2E, #ACB992);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ACB992;
+  background-image: -webkit-linear-gradient(top, #ACB992, #464E2E);
+  background-image: -moz-linear-gradient(top, #ACB992, #464E2E);
+  background-image: -ms-linear-gradient(top, #ACB992, #464E2E);
+  background-image: -o-linear-gradient(top, #ACB992, #464E2E);
+  background-image: linear-gradient(to bottom, #ACB992, #464E2E);
+  text-decoration: none;
+}
+
+.copy {
+  color: white;
+  font-weight: 100;
+}
+
+.footer-link {
+  color: #362706;
+  margin: 0 25px;
+  padding-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
